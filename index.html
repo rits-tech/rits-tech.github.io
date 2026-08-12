@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>rits-tech</title>
+<meta name="description" content="rits-tech（個人事業主）のウェブサイトです。" />
+<meta name="robots" content="noindex, nofollow" />
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --muted: #666666;
+    --accent: #2d6cdf;
+    --border: #e5e5e5;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #121212;
+      --fg: #f2f2f2;
+      --muted: #a0a0a0;
+      --accent: #6ea8ff;
+      --border: #2a2a2a;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+    line-height: 1.7;
+  }
+  header {
+    padding: 4rem 1.5rem 2rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+  }
+  header h1 {
+    margin: 0 0 0.5rem;
+    font-size: 2rem;
+    letter-spacing: 0.02em;
+  }
+  header p {
+    margin: 0;
+    color: var(--muted);
+  }
+  main {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 4rem;
+  }
+  section {
+    margin-bottom: 2.5rem;
+  }
+  section h2 {
+    font-size: 1.1rem;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+  }
+  section p {
+    margin: 0;
+  }
+  section ul {
+    margin: 0;
+    padding-left: 1.25rem;
+  }
+  section li {
+    margin-bottom: 0.4rem;
+  }
+  dl.profile {
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 1.5rem;
+    row-gap: 0.6rem;
+  }
+  dl.profile dt {
+    color: var(--muted);
+    font-weight: 400;
+  }
+  dl.profile dd {
+    margin: 0;
+  }
+  .notice {
+    font-size: 0.85rem;
+    color: var(--muted);
+    border: 1px dashed var(--border);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+  }
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.85rem;
+    padding: 2rem 1.5rem;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>rits-tech</h1>
+    <p>ソフトウェア開発・モバイルアプリ開発</p>
+  </header>
+  <main>
+    <section>
+      <h2>事業内容</h2>
+      <p>ソフトウェア開発およびモバイルアプリケーション開発を行っています。要件定義から設計・実装・リリース後の運用保守まで、一貫して対応します。</p>
+    </section>
+    <section>
+      <h2>提供サービス</h2>
+      <ul>
+        <li>モバイルアプリの受託開発</li>
+        <li>Webアプリ・APIの設計・開発</li>
+        <li>要件定義・仕様策定から運用保守までサポート</li>
+      </ul>
+    </section>
+    <section>
+      <h2>開発実績</h2>
+      <ul>
+        <li>子育て支援分野のモバイルアプリ開発</li>
+        <li>スマートフォン向けゲームアプリへのライブ配信機能実装</li>
+      </ul>
+    </section>
+    <section>
+      <h2>事業情報</h2>
+      <dl class="profile">
+        <dt>開業日</dt>
+        <dd>2024年1月4日</dd>
+        <dt>屋号</dt>
+        <dd>rits-tech</dd>
+        <dt>所在地</dt>
+        <dd>埼玉県所沢市</dd>
+        <dt>連絡先</dt>
+        <dd><a href="mailto:tsurusaki.ryo@rits-tech.com">tsurusaki.ryo@rits-tech.com</a></dd>
+      </dl>
+    </section>
+  </main>
+  <footer>
+    &copy; 2026 rits-tech
+  </footer>
+</body>
+</html>
