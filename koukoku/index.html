@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>電子公告 | RITS-tech株式会社</title>
+<meta name="description" content="RITS-tech株式会社の電子公告ページです。会社法に基づく公告をこちらに掲載します。" />
+<link rel="icon" href="data:," />
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --bg-soft: #f6f7fb;
+    --fg: #14141c;
+    --muted: #63636f;
+    --accent: #3654e0;
+    --accent-soft: #eef1ff;
+    --border: #e6e6ec;
+    --card-bg: #ffffff;
+    --shadow: 0 1px 2px rgba(20, 20, 28, 0.04), 0 8px 24px rgba(20, 20, 28, 0.06);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0d0d12;
+      --bg-soft: #15151d;
+      --fg: #f1f1f5;
+      --muted: #9a9aa6;
+      --accent: #7d95ff;
+      --accent-soft: #1b2040;
+      --border: #26262f;
+      --card-bg: #16161f;
+      --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.35);
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent); }
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .nav .brand {
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--fg);
+    font-size: 1.05rem;
+  }
+  .nav a.back {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  .nav a.back:hover { color: var(--fg); }
+
+  main {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 3.5rem 1.5rem 4rem;
+  }
+  .eyebrow {
+    display: inline-block;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 0.3rem 0.75rem;
+    border-radius: 999px;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  h1 {
+    margin: 0 0 0.5rem;
+    font-size: 1.9rem;
+    letter-spacing: -0.01em;
+  }
+  main > p.lead {
+    color: var(--muted);
+    margin: 0 0 2.5rem;
+  }
+  section {
+    margin-bottom: 2rem;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem 1.75rem;
+    box-shadow: var(--shadow);
+  }
+  section h2 {
+    margin: 0 0 0.75rem;
+    font-size: 1.05rem;
+  }
+  section p { margin: 0 0 0.5rem; }
+  section p:last-child { margin-bottom: 0; }
+  .url {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.9rem;
+    background: var(--bg-soft);
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    display: inline-block;
+  }
+  .notices {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .notices li {
+    padding: 0.9rem 0;
+    border-top: 1px solid var(--border);
+  }
+  .notices li:first-child { border-top: none; padding-top: 0; }
+  .empty {
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.85rem;
+    padding: 2.5rem 1.5rem;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+  <div class="nav">
+    <a class="brand" href="/">RITS-tech株式会社</a>
+    <a class="back" href="/">トップへ戻る</a>
+  </div>
+
+  <main>
+    <span class="eyebrow">ELECTRONIC PUBLIC NOTICE</span>
+    <h1>電子公告</h1>
+    <p class="lead">会社法に基づく当会社の公告は、本ページに掲載する方法（電子公告）により行います。</p>
+
+    <section>
+      <h2>公告方法</h2>
+      <p>当会社の公告方法は、電子公告とする。</p>
+      <p>ただし、事故その他やむを得ない事由によって電子公告による公告をすることができない場合の公告方法は、官報に掲載する方法とする。</p>
+      <p>電子公告により公告する場合のURLは、次のとおりです。</p>
+      <p class="url">https://rits-tech.com/koukoku/</p>
+    </section>
+
+    <section>
+      <h2>公告一覧</h2>
+      <ul class="notices">
+        <li class="empty">現在、掲載中の公告はありません。決算公告等は、各事業年度終了後に本ページへ掲載します。</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2026 RITS-tech株式会社
+  </footer>
+</body>
+</html>
