@@ -42,10 +42,19 @@
     border-bottom: 1px solid var(--border);
   }
   .nav .brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     font-weight: 700;
     text-decoration: none;
     color: var(--fg);
     font-size: 1.05rem;
+  }
+  .nav .brand img {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    flex-shrink: 0;
   }
   .nav a.back {
     color: var(--muted);
@@ -137,7 +146,10 @@
 </head>
 <body>
   <div class="nav">
-    <a class="brand" href="/">RITS-tech株式会社</a>
+    <a class="brand" href="/">
+      <img src="/logo.png" alt="" width="28" height="28" />
+      RITS-tech株式会社
+    </a>
     <a class="back" href="/">トップへ戻る</a>
   </div>
 
