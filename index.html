@@ -41,6 +41,8 @@
     font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "Helvetica Neue", Arial, sans-serif;
     line-height: 1.75;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    overflow-wrap: anywhere;
   }
   a { color: var(--accent); }
 
@@ -51,6 +53,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.6rem 1rem;
     padding: 1rem 1.5rem;
     background: color-mix(in srgb, var(--bg) 88%, transparent);
     backdrop-filter: blur(10px);
@@ -62,11 +66,13 @@
     text-decoration: none;
     color: var(--fg);
     font-size: 1.05rem;
+    white-space: nowrap;
   }
   .nav ul {
     list-style: none;
     display: flex;
-    gap: 1.5rem;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.25rem;
     margin: 0;
     padding: 0;
   }
@@ -74,8 +80,22 @@
     color: var(--muted);
     text-decoration: none;
     font-size: 0.9rem;
+    position: relative;
+    padding-bottom: 0.15rem;
+    transition: color 0.15s ease;
+  }
+  .nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    height: 1px;
+    background: var(--accent);
+    transition: right 0.2s ease;
   }
   .nav a:hover { color: var(--fg); }
+  .nav a:hover::after { right: 0; }
 
   .hero {
     padding: 5.5rem 1.5rem 4.5rem;
@@ -145,6 +165,12 @@
     border-radius: 12px;
     padding: 1.5rem;
     box-shadow: var(--shadow);
+    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent);
+    box-shadow: 0 4px 8px rgba(20, 20, 28, 0.06), 0 16px 32px rgba(20, 20, 28, 0.09);
   }
   .card h3 {
     margin: 0 0 0.5rem;
@@ -213,6 +239,36 @@
     margin: 0 0.6rem;
   }
   footer nav a:hover { color: var(--fg); }
+
+  @media (max-width: 640px) {
+    .nav {
+      justify-content: flex-start;
+      padding: 0.9rem 1.25rem;
+    }
+    .nav ul {
+      gap: 0.4rem 1rem;
+    }
+    .hero {
+      padding: 3.5rem 1.25rem 3rem;
+    }
+    main {
+      padding: 0 1.25rem;
+    }
+    section {
+      padding: 2.5rem 0;
+    }
+    dl.profile {
+      grid-template-columns: 1fr;
+      row-gap: 0.3rem;
+    }
+    dl.profile dt {
+      margin-top: 1rem;
+      font-size: 0.85rem;
+    }
+    dl.profile dt:first-child {
+      margin-top: 0;
+    }
+  }
 </style>
 </head>
 <body>
@@ -238,7 +294,7 @@
         <span class="label">Business</span>
         <h2>事業内容</h2>
       </div>
-      <p>ソフトウェア開発およびモバイルアプリケーション開発を行っています。要件定義から設計・実装・リリース後の運用保守まで、一貫して対応します。</p>
+      <p>ソフトウェア開発およびモバイルアプリケーション開発を行っています。要件定義から設計・実装、リリース後の運用保守まで幅広く対応します。</p>
     </section>
 
     <section id="services">
