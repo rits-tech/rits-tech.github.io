@@ -91,8 +91,12 @@
     background: var(--accent);
     transition: right 0.2s ease;
   }
-  .nav a:hover { color: var(--fg); }
-  .nav a:hover::after { right: 0; }
+  .nav a.active { color: var(--fg); }
+  .nav a.active::after { right: 0; }
+  @media (hover: hover) and (pointer: fine) {
+    .nav a:hover { color: var(--fg); }
+    .nav a:hover::after { right: 0; }
+  }
 
   .hero {
     padding: 5.5rem 1.5rem 4.5rem;
@@ -371,5 +375,31 @@
     </nav>
     &copy; 2026 RITS-tech株式会社
   </footer>
+
+  <script>
+    (function () {
+      var navLinks = Array.prototype.slice.call(document.querySelectorAll(".nav ul a"));
+      var sections = navLinks
+        .map(function (a) { return document.querySelector(a.getAttribute("href")); })
+        .filter(Boolean);
+      if (!("IntersectionObserver" in window) || !sections.length) return;
+
+      var observer = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            navLinks.forEach(function (a) { a.classList.remove("active"); });
+            var link = navLinks.filter(function (a) {
+              return a.getAttribute("href") === "#" + entry.target.id;
+            })[0];
+            if (link) link.classList.add("active");
+          });
+        },
+        { rootMargin: "-45% 0px -50% 0px", threshold: 0 }
+      );
+
+      sections.forEach(function (section) { observer.observe(section); });
+    })();
+  </script>
 </body>
 </html>
